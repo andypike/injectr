@@ -3,6 +3,11 @@ Injectr
 
 Super simple IOC for Rails
 
+Warning
+-------
+
+This is just an experiment. Injectr has not been tested and is not considered production ready.
+
 How to install
 --------------
 
