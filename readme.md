@@ -107,3 +107,5 @@ class Carpenter
   end
 end
 ```
+
+Here's a sample Rails app that uses the above if you are interested: https://github.com/andypike/injectr_app
