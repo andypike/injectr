@@ -35,7 +35,7 @@ craftsman = Injectr.resolve(:craftsman)
 Injecting into a Rails controller:
 ----------------------------------
 
-Just add an initialize method with args names that match the registered keys. DON'T FORGET TO CALL SUPER()
+Just add an constructor with args names that match the registered keys. DON'T FORGET TO CALL SUPER()
 
 ```
 class HomeController < ApplicationController
