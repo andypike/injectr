@@ -6,7 +6,7 @@ Super simple IOC for Rails
 Warning
 -------
 
-This is just an experiment. Injectr has not been tested and is not considered production ready.
+This is just an experiment. Injectr has not been properly tested and is not considered production ready.
 
 How to install
 --------------
@@ -40,7 +40,7 @@ craftsman = Injectr.resolve(:craftsman)
 Injecting into a Rails controller:
 ----------------------------------
 
-Just add an constructor with args names that match the registered keys. DON'T FORGET TO CALL SUPER()
+Just add an constructor with param names that match the registered keys. No need to register the controllers. DON'T FORGET TO CALL SUPER()
 
 ```
 class HomeController < ApplicationController

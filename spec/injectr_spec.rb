@@ -42,13 +42,23 @@ describe Injectr do
     end
   end
 
-  context "given a registered class" do
-    it "instantiates an instance" do
+  context "instantiating classes" do
+    it "instantiates an instance of a registered class" do
       Injectr.create_container do |c|
         c.register :foo, Foo
       end
 
       Injectr.create(Foo).should be_a_kind_of(Foo)
+    end
+
+    it "instantiates an instance of a non-registered class with registered dependencies" do
+      Injectr.create_container do |c|
+        c.register :foo, Foo
+      end
+
+      controller = Injectr.create(HomeController)
+      controller.should be_a_kind_of(HomeController)
+      controller.foo.should be_a_kind_of(Foo)
     end
   end
 end
