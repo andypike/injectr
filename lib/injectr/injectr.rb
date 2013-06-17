@@ -14,8 +14,8 @@ class Injectr
  
   def self.create(klass)
     constructor_params = klass.instance_method(:initialize).parameters
-    required_dependancies = constructor_params.map{|p| resolve(p.last)}
-    klass.new(*required_dependancies)
+    dependancies = constructor_params.map{|p| resolve(p.last)}
+    klass.new(*dependancies)
   end
 
   def initialize
