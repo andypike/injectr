@@ -4,6 +4,7 @@ class Injectr
   def self.create_container
     @container = self.new
     yield @container
+    @container
   end
  
   def self.resolve(key)
@@ -13,8 +14,7 @@ class Injectr
  
   def self.create(klass)
     constructor_params = klass.instance_method(:initialize).parameters
-    required_dependancies = constructor_params.select{|p| p.first == :req}
-                                              .map{|p| resolve(p.last)}
+    required_dependancies = constructor_params.map{|p| resolve(p.last)}
     klass.new(*required_dependancies)
   end
 

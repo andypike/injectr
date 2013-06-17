@@ -109,3 +109,11 @@ end
 ```
 
 Here's a sample Rails app that uses the above if you are interested: https://github.com/andypike/injectr_app
+
+Still To Do
+-----------
+
+* Handle missing registrations
+* Circular dependency detection
+* Optional params
+* Lifecycle options
