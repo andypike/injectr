@@ -1,7 +1,7 @@
 Injectr
 =======
 
-Super simple IOC for Rails
+Super simple IOC for Rails. This was part of my research for my talk on Exploring IoC in Ruby. Checkout the slides here: https://speakerdeck.com/andypike/exploring-ioc-in-ruby
 
 Warning
 -------
